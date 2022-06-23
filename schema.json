@@ -1,0 +1,63 @@
+{
+    "type": "object",
+    "title": "",
+    "properties": {
+        "data": {
+            "type": "object",
+            "title": "",
+            "properties": {
+                "customer": {
+                    "type": "object",
+                    "title": "",
+                    "properties": {
+                        "created_at": {
+                            "type": "string",
+                            "title": ""
+                        },
+                        "firstname": {
+                            "type": "string",
+                            "title": ""
+                        },
+                        "lastname": {
+                            "type": "string",
+                            "title": ""
+                        },
+                        "email": {
+                            "type": "string",
+                            "title": ""
+                        },
+                        "default_billing": {
+                            "type": "null",
+                            "title": ""
+                        },
+                        "default_shipping": {
+                            "type": "null",
+                            "title": ""
+                        },
+                        "taxvat": {
+                            "type": "string",
+                            "title": ""
+                        },
+                        "date_of_birth": {
+                            "type": "string",
+                            "title": ""
+                        },
+                        "gender": {
+                            "type": "integer",
+                            "title": ""
+                        },
+                        "addresses": {
+                            "type": "array",
+                            "title": "",
+                            "items": {
+                                "type": "object",
+                                "title": "",
+                                "properties": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
