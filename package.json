@@ -4,7 +4,7 @@
   "description": "Newman project dedicated to all graphQl queries and mutiations that are avaliable on Adobe commerce native.",
   "main": "index.js",
   "scripts": {
-    "native_apis": "newman run collections/Magento-2-sample.json -r htmlextra --reporter-htmlextra-darkTheme --reporter-html-template=report --reporter-htmlextra-title 'Magento Native GraphQl APIs Tests' --insecure -e"
+    "native_apis": "newman run collections/GraphQL_Adobe_Commerce_collection.json -r htmlextra --reporter-htmlextra-darkTheme --reporter-html-template=report --reporter-htmlextra-title 'Magento Native GraphQl APIs Tests' --insecure -e"
   },
   "author": "",
   "license": "ISC"

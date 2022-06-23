@@ -38,8 +38,11 @@ GraphQL - Adobe Commerce
 
 ## DISCLAIMER ##
 The requests that are not present on a default Magento 2 installations (PWAOnly, B2BOnly & AdobeCommerceOnly) *Have not been tested*, they where only made by following the official documentation, so there can be errors within this requests.
+Also, since the collection contains about 125 amount o requests, to run the complete automated tests it takes some time, between 2 and 4 minutes approximately
 
 ## Environment needed for  automated variables ##
+***
+```
 ├───API Url
 │   └───URL used for the requests
 ├───usermail
@@ -52,7 +55,13 @@ The requests that are not present on a default Magento 2 installations (PWAOnly,
 │   └───SKU sample from a configurable parent product
 ├───configurable_sku
 │   └───SKU sample from a configurable product
+├───admin_token
+│   └───Token for admin, needed for some requests
+```
+***
 
+***
+```
 ## Queries with Filters or Parameters ##
 ├───GeneralQueries
 │   └───cmsBlocksQuery
@@ -79,9 +88,56 @@ The requests that are not present on a default Magento 2 installations (PWAOnly,
 │   └───giftRegistryEmailSearchQuery
 │   └───giftRegistryIdSearchQuery
 │   └───giftRegistryTypesQuery
+```
+***
+
 
 # Requests skipped for tests#
- All of the contained on PWAOnly, B2BOnly & AdobeCommerceOnly, as well as the following:
+All of the contained on PWAOnly, B2BOnly & AdobeCommerceOnly, as well as the following:
+-createCustomer
+-revokeCustomerToken
+-generateCustomerTokenAsAdminMutation
+-removeItemFromCart
+-mergeCartsMutation
+-updateCartItemsMutation
+-reorderItemsMutation
+-sendEmailToFriendMutation
+-createBraintreeClientTokenMutation
+-createKlarnaPaymentsSessionMutation
+-createPayflowProTokenMutation
+-createPaypalExpressTokenMutation
+-deletePaymentTokenMutation
+-setGuestEmailOnCartMutation
+-applyCouponToCartMutation
+-dynamicBlocksQuery
+
+
+
+
+# Tests found on Requests (With the exeptions above)#
+```
+	let unwantedList = [
+		"errors", "errorMessage", "alert", "Load error", "Null file name", "error code", "Service Unavailable", "Cannot query field", "Errors:", "Syntax Error"
+	]
+	pm.test("Check for unwanted content in requests", () => {
+		unwantedList.map(item => pm.expect(pm.response.text()).not.to.include(item));
+	});
+```
+
+# Requests with Schema tests#
+-createCustomerMutation
+-createCustomerV2Mutation
+-generateCustomerTokenMutation
+-changeCustomerPasswordMutation
+-customerQuery
+-productsQuery
+-createEmptyCartMutation
+-addSimpleProductsToCartMutation
+-customerCartQuery
+
+
+
+
 
 ## Newman Automated tests stucture & how to  ##
 ***
@@ -95,6 +151,7 @@ GRAPHQL-API-ADOBECOMMERCE/
 ├───s3_scripts
 ├───scripts
 ```
+
 Run the command ./scripts/install-newman.sh (Note that, following this command the installation will use SUDO, if you don't wish to use SUDO on the intalations, please do them manually)
 To run only the tests you need to run the comand: "npm run native_apis environment/Native-environment.json 2>/dev/null || true" (note that if you changed the encironment or the collection name, you should do as well on this command)
 
@@ -106,17 +163,15 @@ We have as well the option of runing this tests via dockers & saving the reports
 
 
 ## Requests with failed responses even following the documentation ##
-    assignCustomerToGuestCartMutation(
-        https://devdocs.magento.com/guides/v2.4/graphql/mutations/assign-customer-to-guest-cart.html
-    )
-    createPayflowProTokenMutation(
-        https://devdocs.magento.com/guides/v2.4/graphql/mutations/create-payflow-pro-token.html
-    )
-
+    assignCustomerToGuestCartMutation
+    removeItemFromCart
+    mergeCartsMutation
+    dynamicBlocksQuery
 
 
 
 ## PENDING CHANGES  ##
+    Make updateCartItemsMutation Get on prerequtest a itemId
     Create Payment token, and safe response on payment_token_hash
     Create and fill admintoken 
     Correct the request *mergeCartsMutation*

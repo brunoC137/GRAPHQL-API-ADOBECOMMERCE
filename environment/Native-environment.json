@@ -1,0 +1,155 @@
+{
+	"id": "f4019968-77ed-4fa3-8c55-3239e935ca40",
+	"name": "Native",
+	"values": [
+		{
+			"key": "API Url",
+			"value": "https://magento.nublue.co.uk",
+			"enabled": true
+		},
+		{
+			"key": "query",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "usermail",
+			"value": "roni_cost@example.com",
+			"enabled": true
+		},
+		{
+			"key": "userpass",
+			"value": "roni_cost3@example.com",
+			"enabled": true
+		},
+		{
+			"key": "simple_sku_sample",
+			"value": "24-MB04",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "configurable_parent_sku",
+			"value": "WSH12",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "configurable_sku",
+			"value": "WSH12-28-Green",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "uid",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "coupon_code",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "customerAddressId",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "order_number_sample",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "payment_token_hash",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "admin_token",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "createCustomerMutation_schema_true",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"createCustomer\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"customer\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"firstname\": {\n                                    \"type\": \"string\"\n                                },\n                                \"lastname\": {\n                                    \"type\": \"string\"\n                                },\n                                \"email\": {\n                                    \"type\": \"string\"\n                                },\n                                \"is_subscribed\": {\n                                    \"type\": \"boolean\"\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "createCustomerMutation_schema_false",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"errors\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"message\": {\n                        \"type\": \"string\"\n                    },\n                    \"extensions\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                            \"category\": {\n                                \"type\": \"string\"\n                            }\n                        }\n                    },\n                    \"locations\": {\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"line\": {\n                                    \"type\": \"integer\"\n                                },\n                                \"column\": {\n                                    \"type\": \"integer\"\n                                }\n                            }\n                        }\n                    },\n                    \"path\": {\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        }\n                    }\n                }\n            }\n        },\n        \"data\": {\n            \"type\": \"object\",\n            \"title\": \"\",\n            \"properties\": {\n                \"createCustomer\": {\n                    \"type\": \"null\",\n                    \"title\": \"\"\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "generateCustomerTokenMutation_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"generateCustomerToken\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"token\": {\n                            \"type\": \"string\"\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "customerQuery_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"customer\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"created_at\": {\n                            \"type\": \"string\"\n                        },\n                        \"firstname\": {\n                            \"type\": \"string\"\n                        },\n                        \"lastname\": {\n                            \"type\": \"string\"\n                        },\n                        \"email\": {\n                            \"type\": \"string\"\n                        },\n                        \"default_billing\": {\n                            \"type\": \"string\"\n                        },\n                        \"default_shipping\": {\n                            \"type\": \"string\"\n                        },\n                        \"taxvat\": {\n                            \"type\": \"null\"\n                        },\n                        \"date_of_birth\": {\n                            \"type\": \"string\"\n                        },\n                        \"gender\": {\n                            \"type\": \"integer\"\n                        },\n                        \"addresses\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"type\": \"object\",\n                                \"properties\": {\n                                    \"firstname\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"lastname\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"street\": {\n                                        \"type\": \"array\",\n                                        \"items\": {\n                                            \"type\": \"string\"\n                                        }\n                                    },\n                                    \"city\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"region\": {\n                                        \"type\": \"object\",\n                                        \"properties\": {\n                                            \"region_code\": {\n                                                \"type\": \"string\"\n                                            },\n                                            \"region\": {\n                                                \"type\": \"string\"\n                                            }\n                                        }\n                                    },\n                                    \"postcode\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"country_code\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"telephone\": {\n                                        \"type\": \"string\"\n                                    }\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "customerOrdersQuery_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"customerOrders\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"items\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"type\": \"object\",\n                                \"properties\": {\n                                    \"order_number\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"id\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"created_at\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"grand_total\": {\n                                        \"type\": \"number\"\n                                    },\n                                    \"status\": {\n                                        \"type\": \"string\"\n                                    }\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "changeCustomerPasswordMutation_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"changeCustomerPassword\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"id\": {\n                            \"type\": [\"null\",\"integer\"]\n                        },\n                        \"email\": {\n                            \"type\": \"string\"\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "productsQuery_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"products\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"total_count\": {\n                            \"type\": \"integer\"\n                        },\n                        \"items\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"type\": \"object\",\n                                \"properties\": {\n                                    \"name\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"sku\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"price_range\": {\n                                        \"type\": \"object\",\n                                        \"properties\": {\n                                            \"minimum_price\": {\n                                                \"type\": \"object\",\n                                                \"properties\": {\n                                                    \"regular_price\": {\n                                                        \"type\": \"object\",\n                                                        \"properties\": {\n                                                            \"value\": {\n                                                                \"type\": \"integer\"\n                                                            },\n                                                            \"currency\": {\n                                                                \"type\": \"string\"\n                                                            }\n                                                        }\n                                                    }\n                                                }\n                                            }\n                                        }\n                                    }\n                                }\n                            }\n                        },\n                        \"page_info\": {\n                            \"type\": \"object\",\n                            \"title\": \"\",\n                            \"properties\": {\n                                \"page_size\": {\n                                    \"type\": \"integer\",\n                                    \"title\": \"\"\n                                },\n                                \"current_page\": {\n                                    \"type\": \"integer\",\n                                    \"title\": \"\"\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "createEmptyCartMutation_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"createEmptyCart\": {\n                    \"type\": \"string\"\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "customerCartQuery_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"customerCart\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"id\": {\n                            \"type\": \"string\"\n                        },\n                        \"items\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"type\": \"object\",\n                                \"properties\": {\n                                    \"id\": {\n                                        \"type\": \"string\"\n                                    },\n                                    \"product\": {\n                                        \"type\": \"object\",\n                                        \"properties\": {\n                                            \"name\": {\n                                                \"type\": \"string\"\n                                            }\n                                        }\n                                    },\n                                    \"quantity\": {\n                                        \"type\": \"integer\"\n                                    },\n                                    \"prices\": {\n                                        \"type\": \"object\",\n                                        \"properties\": {\n                                            \"price\": {\n                                                \"type\": \"object\",\n                                                \"properties\": {\n                                                    \"value\": {\n                                                        \"type\": \"integer\"\n                                                    }\n                                                }\n                                            },\n                                            \"discounts\": {\n                                                \"type\": [\"array\", \"null\"],\n                                                \"items\": {\n                                                    \"type\": \"object\",\n                                                    \"properties\": {\n                                                        \"amount\": {\n                                                            \"type\": \"object\",\n                                                            \"properties\": {\n                                                                \"value\": {\n                                                                    \"type\": [\"integer\",\"number\"]\n                                                                }\n                                                            }\n                                                        }\n                                                    }\n                                                }\n                                            }\n                                        }\n                                    }\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "addSimpleProductsToCartMutation_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"addSimpleProductsToCart\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"cart\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"items\": {\n                                    \"type\": \"array\",\n                                    \"items\": {\n                                        \"type\": \"object\",\n                                        \"properties\": {\n                                            \"id\": {\n                                                \"type\": \"string\"\n                                            },\n                                            \"product\": {\n                                                \"type\": \"object\",\n                                                \"properties\": {\n                                                    \"sku\": {\n                                                        \"type\": \"string\"\n                                                    },\n                                                    \"stock_status\": {\n                                                        \"type\": \"string\"\n                                                    }\n                                                }\n                                            },\n                                            \"quantity\": {\n                                                \"type\": \"integer\"\n                                            }\n                                        }\n                                    }\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "updateCartItemsMutation_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"updateCartItems\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"cart\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"items\": {\n                                    \"type\": \"array\",\n                                    \"items\": {\n                                        \"type\": \"object\",\n                                        \"properties\": {\n                                            \"id\": {\n                                                \"type\": \"string\"\n                                            },\n                                            \"product\": {\n                                                \"type\": \"object\",\n                                                \"properties\": {\n                                                    \"name\": {\n                                                        \"type\": \"string\"\n                                                    }\n                                                }\n                                            },\n                                            \"quantity\": {\n                                                \"type\": \"integer\"\n                                            }\n                                        }\n                                    }\n                                },\n                                \"prices\": {\n                                    \"type\": \"object\",\n                                    \"title\": \"\",\n                                    \"properties\": {\n                                        \"grand_total\": {\n                                            \"type\": \"object\",\n                                            \"title\": \"\",\n                                            \"properties\": {\n                                                \"value\": {\n                                                    \"type\": \"number\"\n                                                },\n                                                \"currency\": {\n                                                    \"type\": \"string\"\n                                                }\n                                            }\n                                        }\n                                    }\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "removeItemFromCart_schema",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"removeItemFromCart\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"cart\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"items\": {\n                                    \"type\": \"array\",\n                                    \"items\": {\n                                        \"type\": \"object\",\n                                        \"properties\": {\n                                            \"id\": {\n                                                \"type\": \"string\"\n                                            },\n                                            \"product\": {\n                                                \"type\": \"object\",\n                                                \"properties\": {\n                                                    \"name\": {\n                                                        \"type\": \"string\"\n                                                    }\n                                                }\n                                            },\n                                            \"quantity\": {\n                                                \"type\": \"integer\"\n                                            }\n                                        }\n                                    }\n                                },\n                                \"prices\": {\n                                    \"type\": \"object\",\n                                    \"properties\": {\n                                        \"grand_total\": {\n                                            \"type\": \"object\",\n                                            \"properties\": {\n                                                \"value\": {\n                                                    \"type\": \"number\"\n                                                },\n                                                \"currency\": {\n                                                    \"type\": \"string\"\n                                                }\n                                            }\n                                        }\n                                    }\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"enabled": true
+		},
+		{
+			"key": "createCustomerV2Mutation_schema_true",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"createCustomerV2\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"customer\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"firstname\": {\n                                    \"type\": \"string\"\n                                },\n                                \"lastname\": {\n                                    \"type\": \"string\"\n                                },\n                                \"email\": {\n                                    \"type\": \"string\"\n                                },\n                                \"is_subscribed\": {\n                                    \"type\": \"boolean\"\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n}",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "createCustomerV2Mutation_schema_false",
+			"value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"errors\": {\n            \"type\": \"array\",\n            \"items\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"message\": {\n                        \"type\": \"string\"\n                    },\n                    \"extensions\": {\n                        \"type\": \"object\",\n                        \"properties\": {\n                            \"category\": {\n                                \"type\": \"string\"\n                            }\n                        }\n                    },\n                    \"locations\": {\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"line\": {\n                                    \"type\": \"integer\"\n                                },\n                                \"column\": {\n                                    \"type\": \"integer\"\n                                }\n                            }\n                        }\n                    },\n                    \"path\": {\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        }\n                    }\n                }\n            }\n        },\n        \"data\": {\n            \"type\": \"object\",\n            \"title\": \"\",\n            \"properties\": {\n                \"createCustomer\": {\n                    \"type\": \"null\",\n                    \"title\": \"\"\n                }\n            }\n        }\n    }\n}",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-06-23T18:32:57.095Z",
+	"_postman_exported_using": "Postman/9.21.2"
+}
