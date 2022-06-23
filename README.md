@@ -40,8 +40,8 @@ GraphQL - Adobe Commerce
 The requests that are not present on a default Magento 2 installations (PWAOnly, B2BOnly & AdobeCommerceOnly) *Have not been tested*, they where only made by following the official documentation, so there can be errors within this requests.
 Also, since the collection contains about 125 amount o requests, to run the complete automated tests it takes some time, between 2 and 4 minutes approximately
 
-## Environment needed for  automated variables ##
-***
+## Environment needed##
+
 ```
 ├───API Url
 │   └───URL used for the requests
@@ -58,11 +58,10 @@ Also, since the collection contains about 125 amount o requests, to run the comp
 ├───admin_token
 │   └───Token for admin, needed for some requests
 ```
-***
 
-***
-```
 ## Queries with Filters or Parameters ##
+
+```
 ├───GeneralQueries
 │   └───cmsBlocksQuery
 │   └───cmsPageQuery
@@ -89,11 +88,11 @@ Also, since the collection contains about 125 amount o requests, to run the comp
 │   └───giftRegistryIdSearchQuery
 │   └───giftRegistryTypesQuery
 ```
-***
 
 
-# Requests skipped for tests#
+# Requests skipped for tests #
 All of the contained on PWAOnly, B2BOnly & AdobeCommerceOnly, as well as the following:
+```
 -createCustomer
 -revokeCustomerToken
 -generateCustomerTokenAsAdminMutation
@@ -110,11 +109,9 @@ All of the contained on PWAOnly, B2BOnly & AdobeCommerceOnly, as well as the fol
 -setGuestEmailOnCartMutation
 -applyCouponToCartMutation
 -dynamicBlocksQuery
+```
 
-
-
-
-# Tests found on Requests (With the exeptions above)#
+# Tests used on Requests (With the exeptions above) #
 ```
 	let unwantedList = [
 		"errors", "errorMessage", "alert", "Load error", "Null file name", "error code", "Service Unavailable", "Cannot query field", "Errors:", "Syntax Error"
@@ -124,7 +121,8 @@ All of the contained on PWAOnly, B2BOnly & AdobeCommerceOnly, as well as the fol
 	});
 ```
 
-# Requests with Schema tests#
+# Requests with Schema tests #
+```
 -createCustomerMutation
 -createCustomerV2Mutation
 -generateCustomerTokenMutation
@@ -134,13 +132,11 @@ All of the contained on PWAOnly, B2BOnly & AdobeCommerceOnly, as well as the fol
 -createEmptyCartMutation
 -addSimpleProductsToCartMutation
 -customerCartQuery
+```
 
 
+## Newman Automated tests structure & how to  ##
 
-
-
-## Newman Automated tests stucture & how to  ##
-***
 ```
 GRAPHQL-API-ADOBECOMMERCE/
 ├───aws
@@ -162,7 +158,7 @@ We have as well the option of runing this tests via dockers & saving the reports
 
 
 
-## Requests with failed responses even following the documentation ##
+## Requests with failed responses ##
     assignCustomerToGuestCartMutation
     removeItemFromCart
     mergeCartsMutation
