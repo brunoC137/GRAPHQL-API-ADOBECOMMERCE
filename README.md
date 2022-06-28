@@ -1,5 +1,10 @@
 ## GraphQL API Adobe Commerce ##
-Project dedicated to all graphQl queries and mutiations that are avaliable on Adobe commerce native, some of the requests have automated tests, see the all this file to find those who are.
+## How the requests are organized ##
+***
+Project dedicated to all graphQl queries and mutiations that are avaliable on Adobe commerce native (2.4), some of the requests have automated tests, see the all this file to find all the details.
+***
+If you just want to use the collection without any kind of automated tests, just import the collection.json file (GraphQL_Adobe_Commerce_collection.json) found on the path /collection and the enviromnent.json file (Native-environment.json) to your Postman. More info on how to import can be found in the [Postman official documentation](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)
+***
 
 ## How the requests are organized ##
 ***
@@ -37,10 +42,9 @@ GraphQL - Adobe Commerce
 ***
 
 ## DISCLAIMER ##
-The requests that are not present on a default Magento 2 installations (PWAOnly, B2BOnly & AdobeCommerceOnly) *Have not been tested*, they where only made by following the official documentation, so there can be errors within this requests.
-Also, since the collection contains about 125 amount o requests, to run the complete automated tests it takes some time, between 2 and 4 minutes approximately
+The requests that are not present on a default Magento 2 installations (PWAOnly, B2BOnly & AdobeCommerceOnly) *Have not been tested*, they where made by following the [official documentation](https://devdocs.magento.com/guides/v2.4/graphql/).
 
-## Environment needed##
+## Environment variables needed##
 
 ```
 ├───API Url
@@ -147,14 +151,14 @@ GRAPHQL-API-ADOBECOMMERCE/
 ├───s3_scripts
 ├───scripts
 ```
-
-Run the command ./scripts/install-newman.sh (Note that, following this command the installation will use SUDO, if you don't wish to use SUDO on the intalations, please do them manually)
-To run only the tests you need to run the comand: "npm run native_apis environment/Native-environment.json 2>/dev/null || true" (note that if you changed the encironment or the collection name, you should do as well on this command)
-
-We have as well the option of runing this tests via dockers & saving the reports on AWS s3 buckets, to do so its needed to follow the steps:
+***
+Run the command ./scripts/install-newman.sh (Note that, following this command the installation will use SUDO, if you don't wish to use SUDO on the installations, please do them manually)
+To run only the tests you need to run the comand: "npm run native_apis environment/Native-environment.json 2>/dev/null" (note that if you changed the environment name you should do as well on this command)
+***
+We have as well the option of runing this tests via docker & saving the reports on AWS s3 buckets, to do so its needed to follow the steps:
 -To use the AWS control by CLI its needed the keys from the account, so we need to save them as environment variable, with the same names as the ones on the script ./Scripts/dockerScript.sh
--Once the keys are correct, its only needed to run the script ./Scripts/dockerScript.sh, this will create an image, install the dependancies, run the tests and upload the results to two buckets on AWS S3, one with all the past tests, and one with only the most recent one 
-
+-Once the keys are correct, its needed to run the script ./Scripts/dockerScript.sh, this will create an image, install the dependancies, run the tests and upload the results to two buckets on AWS S3, one with all the past tests, and one with only the most recent one 
+***
 
 
 
